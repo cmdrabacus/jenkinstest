@@ -1,5 +1,6 @@
 package jenkinstest;
 
+// create a palindrome
 public class Palindrome {
 	
 	public static boolean isPalindrome(String input) {
