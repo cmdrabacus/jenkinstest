@@ -1,5 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <properties>
+	<included.packages>-Dincluded.packages=com.ikokoon</included.packages>
+	<included.adapters>-Dincluded.adapters=coverage;complexity;dependency</included.adapters>
+</properties>
+<build>
+
+	<plugins>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<configuration>
+				<forkMode>once</forkMode>
+				<argLine>-javaagent:serenity/serenity.jar -Xms512m -Xmx1024m ${included.packages} ${included.adapters}</argLine>
+			</configuration>
+		</plugin>
+		
+	</plugins>
+
+</build>
   <groupId>de.jenkins</groupId>
   <artifactId>jenkinstest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
