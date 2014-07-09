@@ -7,12 +7,12 @@ public class PalindromeTest {
 	
 	@Test
 	public void isPalindromeTest() {
-		Assert.assertFalse(Palindrome.isPalindrome("Otto"), "Ist kein Palindrome");
+		Assert.assertTrue(Palindrome.isPalindrome("Otto"), "Ist ein Palindrome");
 	}
 
 	@Test
 	public void isNoPalindromeTest() {
-		Assert.assertFalse(Palindrome.isPalindrome("Test"), "Ist ein Palindrome");
+		Assert.assertFalse(Palindrome.isPalindrome("Test"), "Ist kein Palindrome");
 	}
 
 }
