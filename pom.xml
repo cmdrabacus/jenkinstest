@@ -7,6 +7,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+				
                 <version>2.5.1</version>
                 <configuration>
                     <formats>
@@ -29,7 +30,25 @@
   <groupId>de.jenkins</groupId>
   <artifactId>jenkinstest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>JenkinsThesisTest</name>
+  <properties>
+		<jdk.version>1.6</jdk.version>
+	</properties>
+ 
+	<build>
+	<plugins>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>2.3.2</version>
+		<configuration>
+			<source>${jdk.version}</source>
+			<target>${jdk.version}</target>
+		</configuration>
+	  </plugin>
+	</plugins>
+	</build>
   <description>	</description>
   <dependencies>
   	<dependency>
