@@ -32,7 +32,8 @@
                         </goals>
                     </execution>
                 </executions>
-             <plugin>
+            </plugin>
+                 <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <descriptorRefs>
@@ -53,7 +54,6 @@
           </execution>
         </executions>
       </plugin>
-    </plugins>
         </plugins>
      
     </build>
