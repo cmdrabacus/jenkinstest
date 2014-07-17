@@ -33,30 +33,36 @@
                     </execution>
                 </executions>
             </plugin>
-                 <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-		<formats>
-                        <format>xml</format>
+			
+			
+			
+			
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>assembly-maven-plugin</artifactId>
+				
+                <version>2.5.1</version>
+                <configuration>
+                    <formats>
+                        <format>jar</format>
                     </formats>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <archive>
-            <manifest>
-              <mainClass>jenkinstest.Palindrome</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>attached</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+			
+			
+			
+			
+			
+			
+                
         </plugins>
      
     </build>
